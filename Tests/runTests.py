@@ -1,11 +1,18 @@
 import json
 import os
+import sys
 
 
 def testCard(cardCodename):
     print(f"Testing {cardCodename} Cards: ")
     for i in testJSONData["cards"][cardCodename]:
-        output = os.popen(f"./Tests/creditcardvalidator {i}").read()
+        output = ""
+        
+        if sys.platform == "win32":
+            output = os.popen(f".\\Tests\\creditcardvalidator.exe {i}").read()
+        else:
+            output = os.popen(f"./Tests/creditcardvalidator {i}").read()
+            
         print(f"{cardCodename} - {i}: {output}")
     print("\n")
 
