@@ -1,7 +1,7 @@
 clear
-g++ ./Project/*.cpp -o out
+g++ ./Project/*.cpp -o creditcardvalidator
 echo ----- ----- -----
 echo   Build  Output
 echo ----- ----- -----
-./out $1
-rm ./out
+./creditcardvalidator $1
+rm ./creditcardvalidator

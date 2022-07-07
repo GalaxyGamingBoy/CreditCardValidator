@@ -1,8 +1,8 @@
 @echo off
 cls
-g++ .\Project\*.cpp -o out
+g++ .\Project\*.cpp -o creditcardvalidator
 echo ----- ----- -----
 echo   Build  Output
 echo ----- ----- -----
-.\out.exe %0
-rm .\out.exe
+.\creditcardvalidator.exe %0
+rm .\creditcardvalidator.exe
