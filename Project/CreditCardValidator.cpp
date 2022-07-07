@@ -13,9 +13,9 @@ int main(int argc, char const *argv[]) {
   }
 
   if (isCreditCardValid(argv[1])) {
-    std::cout << "VALID" << std::endl;
+    std::cout << "VALID";
   } else {
-    std::cout << "NOT VALID" << std::endl;
+    std::cout << "NOT VALID";
   }
   return 0;
 }

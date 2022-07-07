@@ -1,10 +1,8 @@
 {
-    "comment": "This numbers are from paypal test transactions",
+    "comment": "This are some ( not all ) numbers from paypal test transactions website",
     "cards": {
         "AMEX": [
-            "378282246310005",
-            "371449635398431",
-            "378734493671000"
+            "378282246310005"
         ],
         "DINERS": [
             "30569309025904"
@@ -30,8 +28,7 @@
             "4111111111111111",
             "4012888888881881",
             "4999991111111113",
-            "4999992222222229",
-            "4222222222222"
+            "4999992222222229"
         ]
     }
 }
