@@ -5,6 +5,7 @@
 bool argumentValid(int argumentCount);
 void printUsage();
 bool isCreditCardValid(std::string cardNumber);
+std::string recognizeCreditCardCompany(int firstDigit);
 
 int main(int argc, char const *argv[]) {
   if (!argumentValid(argc)) {
@@ -13,7 +14,8 @@ int main(int argc, char const *argv[]) {
   }
 
   if (isCreditCardValid(argv[1])) {
-    std::cout << "VALID";
+    std::cout << "VALID ( " << recognizeCreditCardCompany(argv[1][0] - '0')
+              << " )";
   } else {
     std::cout << "NOT VALID";
   }
@@ -58,4 +60,22 @@ bool isCreditCardValid(std::string cardNumber) {
   if (std::to_string(sum).back() == '0')
     return true;
   return false;
+}
+
+// Recognize credit card company
+std::string recognizeCreditCardCompany(int firstDigit) {
+  switch (firstDigit) {
+  case 2:
+    return "MASTERCARD";
+  case 3:
+    return "AMEX / DINERS / JCB";
+  case 4:
+    return "VISA";
+  case 5:
+    return "MASTERCARD";
+  case 6:
+    return "DISCOVER";
+  default:
+    return "UNKNOWN";
+  }
 }
