@@ -44,8 +44,8 @@ bool isCreditCardValid(std::string cardNumber) {
 
   for (int i = cardNumber.length(); i >= 0; i--) {
     if (i % 2 == 0) {
-      int value = cardNumber[i] - '0';
-      value *= 2;
+      int value = cardNumber[i] - '0'; // Get number from char - 0 is 48
+      value *= 2;                      // Double value
       while (value > 0) {
         int digitSelected = value % 10;
         sum += digitSelected;
